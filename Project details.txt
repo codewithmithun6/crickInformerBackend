@@ -1,0 +1,152 @@
+CrickInformer
+----------------
+
+Frontend
+	Angular 17
+	routing
+	standalone components
+	api calling
+	
+	
+Backend
+	Spring Boot
+	Database accessing using JPA
+	services
+	repositories
+	Scapping
+	
+------------------------------------------------
+1. Entity class
+	 @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int matchId;
+    private String teamHeading;
+    private String matchNumberVenue;
+    private String battingTeam;
+    private String battingTeamScore;
+    private String bowlTeam;
+    private String bowlTeamScore;
+    private String liveText;
+    private String matchLink;
+    private String textComplete;
+    @Enumerated
+    private  matchStatus status;
+	private Date date= new Date();
+	
+	
+------------------------------
+All APIs
+get all live matches
+1. GET --> http://localhost:8081/match/live
+get all matches
+2. GET --> http://localhost:8081/match/
+get point table
+3. GET --> http://localhost:8081/match/point-table
+
+
+--------------------------------------------
+
+Frontend
+	Angular 17
+	routing
+	standalone components
+	api calling
+	
+Steps:
+	Angular
+	Requirement
+	
+
+	
+Creating angular project -->17/16
+		-->CrickFront --> ng new crickFront
+		-->Understand
+			Angular components
+			angular service
+			angular api call --> HttpClient
+			Documentation ko use karege.
+			
+		Server side rendering
+			Performance achhi ho jati hai.
+			SEO (Search Engine optimization) ke liye bahut achha hai.
+		Jb aapka application serve ho rha hai to app component chal rha hai.
+			Component ke pass hota h.
+				--> Html file --> This is templte file [app.component.html]
+				-->TS file --> ye main component hota h jisme logics likha jaata h. [app.component.ts]
+				-->CSS file --> template file ki css hoti h color and designing ke liye. [app.component.css]
+				--> spect file --> for testing uses. [app.component.aspect.ts]
+				
+		Routing
+			
+				
+				
+How to insyall tailwind for css
+---------------------------------
+click on this URL : https://tailwindcss.com/docs/guides/angular
+
+and follow the steps:
+1. ng new my-project
+2. cd my-project
+3. npm install -D tailwindcss postcss autoprefixer
+4. npx tailwindcss init
+
+go to tailwind.config.js file and add below lline inside content
+
+"./src/**/*.{html,ts}"
+---
+eg: 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+-------
+Install tailwind in VScode
+Install angular language service in VScode
+
+
+---------------------------
+cd src/app
+
+create folder
+mkdir pages
+
+cd pages
+ng g c live
+ng g c history
+ng g c point-table
+ng g c home
+
+Create service
+-----
+cd src/app
+create one folder
+mkdir services
+
+cd services
+ng g s api-call
+
+
+----------
+create enviroment
+--------
+click on this URL: https://angular.dev/tools/cli/environments#
+
+ng generate environments
+
+The project's src/environments/ directory contains the base configuration file, environment.ts, which provides the default configuration for production. You can override default values for additional environments, such as development and staging, in target-specific configuration files.
+
+my-app/src/environments
+├── environment.development.ts
+├── environment.staging.ts
+└── environment.ts
+	
+	
+		
+
+
